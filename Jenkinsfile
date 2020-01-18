@@ -43,7 +43,7 @@ stages {
             steps {
                 echo 'Deploying to TEST environment..'
 				sh '''
-					set +x
+					#set +x
 					file="$(pwd)/c_programs/ABC.exe"
 					[[ -f "$file" ]] && sudo rm -f "$file"
 					pwd; sudo chmod 777 build; ./build 1> /dev/null
