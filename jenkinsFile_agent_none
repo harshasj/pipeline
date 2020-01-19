@@ -2,7 +2,7 @@ pipeline {
 agent none
 stages {
         stage('Build') {
-		 agent { label 'master' }
+		 agent { label 'project_java' }
             steps {
                 echo 'Building..'
 				sh 'pwd; sudo chmod 777 build deploy test; ./build'
@@ -17,7 +17,7 @@ stages {
             }
         }
         stage('test') {
-			agent { label 'project_java' }
+			agent { label 'master' }
             steps {
                 echo 'Testing....'
 				sh 'sudo chmod 777 build deploy test; ./test'
