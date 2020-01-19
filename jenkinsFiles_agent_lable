@@ -1,6 +1,6 @@
 pipeline {
 agent {
-        label 'slave'
+        label 'project_java'
     }
 stages {
         stage('Build') {
