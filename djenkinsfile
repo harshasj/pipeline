@@ -8,12 +8,11 @@ pipeline {
 			}
        } 
 	   stage('Test ') {
-	   parallel{
 			steps{
 				echo 'Testing in progress .........'
 				sh 'sleep 30'
 			}
-			}
+			
        }
 	   stage('Deploy') {
 			steps{
